@@ -165,6 +165,7 @@ $(document).ready(function() {
 	
 	$(".move").on("click", function(e) {
 		e.preventDefault();  // 기본 동작을 방지
+		$("input[name='bno']").remove();
 		actionForm.append("<input type='hidden' name='bno' value='"+ $(this).attr("href")+"'>");
 		actionForm.attr("action","/board/get");
 		actionForm.submit();
